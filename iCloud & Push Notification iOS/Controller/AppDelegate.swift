@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  iCloud & Push Notification iOS
+//  iCloud & Push Notification
 //
 //  Created by Ivan Ivanov on 4/25/21.
 //
@@ -14,7 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        application.registerForRemoteNotifications()
         return true
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("Received notification")
+        CKService.shared.handleNotification(with: userInfo)
+        completionHandler(.newData)
     }
 
     // MARK: UISceneSession Lifecycle

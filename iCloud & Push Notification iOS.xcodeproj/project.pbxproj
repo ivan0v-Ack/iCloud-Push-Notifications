@@ -13,6 +13,10 @@
 		A711B53A26360B0A006B9698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A711B53826360B0A006B9698 /* Main.storyboard */; };
 		A711B53C26360B0A006B9698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A711B53B26360B0A006B9698 /* Assets.xcassets */; };
 		A711B53F26360B0A006B9698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A711B53D26360B0A006B9698 /* LaunchScreen.storyboard */; };
+		A711B54E26360C2F006B9698 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711B54D26360C2F006B9698 /* Notes.swift */; };
+		A711B55226360C45006B9698 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711B55126360C45006B9698 /* AlertService.swift */; };
+		A711B55526360C5C006B9698 /* CKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711B55426360C5C006B9698 /* CKService.swift */; };
+		A711B55826360C6E006B9698 /* NotesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A711B55726360C6E006B9698 /* NotesService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		A711B53B26360B0A006B9698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A711B53E26360B0A006B9698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A711B54026360B0A006B9698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A711B54D26360C2F006B9698 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		A711B55126360C45006B9698 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		A711B55426360C5C006B9698 /* CKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKService.swift; sourceTree = "<group>"; };
+		A711B55726360C6E006B9698 /* NotesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,51 @@
 		A711B53126360B0A006B9698 /* iCloud & Push Notification iOS */ = {
 			isa = PBXGroup;
 			children = (
+				A711B54026360B0A006B9698 /* Info.plist */,
+				A711B54B26360B60006B9698 /* View */,
+				A711B54A26360B5A006B9698 /* Controller */,
+				A711B54926360B57006B9698 /* Model */,
+				A711B54826360B4F006B9698 /* Service */,
+			);
+			path = "iCloud & Push Notification iOS";
+			sourceTree = "<group>";
+		};
+		A711B54826360B4F006B9698 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A711B55126360C45006B9698 /* AlertService.swift */,
+				A711B55426360C5C006B9698 /* CKService.swift */,
+				A711B55726360C6E006B9698 /* NotesService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A711B54926360B57006B9698 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A711B54D26360C2F006B9698 /* Notes.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A711B54A26360B5A006B9698 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				A711B53226360B0A006B9698 /* AppDelegate.swift */,
 				A711B53426360B0A006B9698 /* SceneDelegate.swift */,
 				A711B53626360B0A006B9698 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A711B54B26360B60006B9698 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				A711B53826360B0A006B9698 /* Main.storyboard */,
 				A711B53B26360B0A006B9698 /* Assets.xcassets */,
 				A711B53D26360B0A006B9698 /* LaunchScreen.storyboard */,
-				A711B54026360B0A006B9698 /* Info.plist */,
 			);
-			path = "iCloud & Push Notification iOS";
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A711B55826360C6E006B9698 /* NotesService.swift in Sources */,
 				A711B53726360B0A006B9698 /* ViewController.swift in Sources */,
 				A711B53326360B0A006B9698 /* AppDelegate.swift in Sources */,
 				A711B53526360B0A006B9698 /* SceneDelegate.swift in Sources */,
+				A711B55526360C5C006B9698 /* CKService.swift in Sources */,
+				A711B54E26360C2F006B9698 /* Notes.swift in Sources */,
+				A711B55226360C45006B9698 /* AlertService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
