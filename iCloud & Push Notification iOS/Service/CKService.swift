@@ -47,6 +47,23 @@ class CKService {
             print(sub ?? "Unable to subscribe")
         }
     }
+    func subscribeUI(){
+        let subscription = CKQuerySubscription(recordType: Notes.recordType, predicate: NSPredicate(value: true), options: .firesOnRecordCreation)
+        
+        let notificationInfo = CKSubscription.NotificationInfo()
+        notificationInfo.title = "This is cool"
+        notificationInfo.subtitle = "A Whole new iClould"
+        notificationInfo.soundName = "default"
+        notificationInfo.alertBody = "A bet ya didnt know a power of the coluld"
+        notificationInfo.shouldBadge = true
+        
+        subscription.notificationInfo = notificationInfo
+        
+        privateDatabase.save(subscription) { (sub, error) in
+            print(error ?? "No CK subError")
+            print(sub ?? "Unable to subscribe")
+        }
+    }
     func fetchRecord(with recordID: CKRecord.ID) {
         privateDatabase.fetch(withRecordID: recordID) { (record, error) in
             print(error ?? "NO CK fetch Error")

@@ -22,7 +22,8 @@ class ViewController: UIViewController {
         navigationControleer.backgroundColor = #colorLiteral(red: 0.8849129081, green: 0.7758224607, blue: 0.2167510092, alpha: 1)
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleFetch), name: NSNotification.Name("internalNotification.fetchRecord"), object: nil)
-        CKService.shared.subscribe()
+        CKService.shared.subscribeUI()
+        UNService.shared.authorize()
         getNotes()
     }
     
